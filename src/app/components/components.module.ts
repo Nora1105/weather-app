@@ -5,6 +5,9 @@ import { ComponentsRoutingModule } from './components-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -15,7 +18,9 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     CommonModule,
-    ComponentsRoutingModule
+    ComponentsRoutingModule,
+    HttpClientModule,
+    FormsModule
   ]
 })
 export class ComponentsModule { }

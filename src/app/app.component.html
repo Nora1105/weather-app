@@ -1,2 +1,14 @@
-<!-- <app-homepage></app-homepage> -->
 <router-outlet></router-outlet>
+<!-- <div class="dataWeather">
+    {{weatherData|json}}
+    <input type="text" [(ngModel)]="city" name="city" />
+    <button (click)="getWeather(city)">Get</button>
+
+    <div class="data" *ngIf="weatherData">
+        <p>Time:{{weatherData.location.localtime}}</p>
+        <p>Location:{{weatherData.location.name}}</p>
+        <p>Temperature: {{weatherData.current.temp_c}}°C <img src={{weatherData.current.condition.icon}} ></p>
+        <p>Wind Direction: {{weatherData.current.wind_dir}}</p>
+        <p>Humidity: {{weatherData.current.humidity}}</p>
+    </div>
+</div> -->
