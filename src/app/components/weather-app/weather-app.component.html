@@ -1,0 +1,49 @@
+<div class="app-body mt-3 d-flex justify-content-center">
+    <div class="dataWeather mt-5">
+        <div class="searchLocation text-center">
+            <!-- <span>
+                <input type="text" [(ngModel)]="city" name="city" />
+                <button (click)="getWeather(city)">Get</button>
+            </span> -->
+            <form class="d-flex" role="search">
+                <input class="form-control me-2 inputSearch" type="text" placeholder="E.g. London" aria-label="E.g. London" [(ngModel)]="city" name="city">
+                <button class="btn btn-outline-success" type="submit" (click)="getWeather(city)">Search</button>
+            </form>
+        </div>
+        <div class="data mt-3 ms-5" *ngIf="weatherData">
+        <!-- <div class="data mt-3 ms-5"> -->
+            <div class="locIcon d-flex flex-row">
+                <div class="d-flex flex-column">
+                    <div class="location">
+                        <p class="locationName">{{weatherData.location.name}}</p>
+                        <p class="locationCountry">{{weatherData.location.region}},{{weatherData.location.country}}</p>
+                        <p class="last_updated_time">Last updated: {{weatherData.current.last_updated}}</p>
+                    </div>
+                </div>
+                <div class="tempIcon ms-5">
+                    <div class="temp">
+                        {{weatherData.current.temp_c}}°C
+                        <img src={{weatherData.current.condition.icon}}>
+                    </div>
+                    <div class="feelTemp">
+                        <p>{{weatherData.current.condition.text}}</p>
+                        <p class="dataShown">Feels like: {{weatherData.current.feelslike_c}}°C</p>
+                        <p class="dataShown">UV: {{weatherData.current.uv}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="humidVisible d-flex flex-row">
+                <div class="humidity">
+                   <p class="dataShown">Humidity: {{weatherData.current.humidity}}%</p>
+                </div>
+                <div class="ms-2 visiblity">
+                   <p class="dataShown">Visiblity: {{weatherData.current.vis_km}}km</p>
+                </div>
+            </div>
+            <div class="windDetails">
+                <p class="dataShown">Wind Direction: {{weatherData.current.wind_dir}}</p>
+                <p class="dataShown">Wind Speed: {{weatherData.current.wind_kph}}km/hr</p>
+            </div>
+        </div>
+    </div>
+</div>

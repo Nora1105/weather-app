@@ -7,6 +7,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { WeatherAppComponent } from './weather-app/weather-app.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 
@@ -14,7 +16,9 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     NavbarComponent,
     HomepageComponent,
-    FooterComponent
+    FooterComponent,
+    WeatherAppComponent,
+    AboutUsComponent
   ],
   imports: [
     CommonModule,

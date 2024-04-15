@@ -1,0 +1,37 @@
+/* .dataWeather{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+ } */
+ /* .searchLocation{
+     display: block;
+ } */
+ /* .data{
+     display: block;
+ } */
+
+ *{
+    font-family: "Times New Roman", Times, serif;
+ }
+ .locationName{
+     font-weight: 600;
+     font-size: 2em;
+ }
+ .inputSearch{
+    width: max(50vw,30vw);
+ }
+.locationCountry{
+    font-size: 1em;
+}
+ .last_updated_time{
+    font-size:.85em;
+ }
+.tempClass{
+    font-weight: 600;
+    font-size: 2em;
+}
+ .dataShown{
+    font-weight: 500;
+ }
