@@ -39,6 +39,7 @@
  .displayWeather{
     width: 50vw;
     margin: auto 40vw;
+    padding: auto 20vw;
  }
 
  .footer{
