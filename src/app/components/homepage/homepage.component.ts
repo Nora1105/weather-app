@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.css'
 })
-export class HomepageComponent {
+export class HomepageComponent implements OnInit{
   locationsecondMethod: any
   locationlatitude: any
   locationlongitude: any
@@ -15,7 +15,8 @@ export class HomepageComponent {
 
   coords: any[] = [];
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient) {}
+  ngOnInit(): void {
     navigator.geolocation.getCurrentPosition((position) => {
       console.log(position.coords)
       this.locationsecondMethod = position.coords
