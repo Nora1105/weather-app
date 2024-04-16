@@ -1,6 +1,11 @@
 .footer-data{
-    width: max(80vw, 10vw);
+    width: max(100vw, 10vw);
 }
 .footer-content{
     list-style: none;
+}
+.footer{
+    background-color: lightblue;
+    /* position: relative;
+    bottom: 0; */
 }

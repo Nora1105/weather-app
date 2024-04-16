@@ -1,67 +1,36 @@
 <app-navbar></app-navbar>
 
-<!-- <div class="app-body mt-3 d-flex justify-content-center">
-    <div class="dataWeather mt-5">
-        <div class="data mt-3 ms-5" *ngIf="weatherData">
-            <div class="locIcon d-flex flex-row">
-                <div class="d-flex flex-column">
-                    <div class="location">
-                        <p class="locationName">{{weatherData.location.name}}</p>
-                        <p class="locationCountry">{{weatherData.location.region}},{{weatherData.location.country}}</p>
-                        <p class="last_updated_time">Last updated: {{weatherData.current.last_updated}}</p>
-                    </div>
-                </div>
-                <div class="tempIcon ms-5">
-                    <div class="temp">
-                        {{weatherData.current.temp_c}}°C
-                        <img src={{weatherData.current.condition.icon}}>
-                    </div>
-                    <div class="feelTemp">
-                        <p>{{weatherData.current.condition.text}}</p>
-                        <p class="dataShown">Feels like: {{weatherData.current.feelslike_c}}°C</p>
-                        <p class="dataShown">UV: {{weatherData.current.uv}}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="humidVisible d-flex flex-row">
-                <div class="humidity">
-                   <p class="dataShown">Humidity: {{weatherData.current.humidity}}%</p>
-                </div>
-                <div class="ms-2 visiblity">
-                   <p class="dataShown">Visiblity: {{weatherData.current.vis_km}}km</p>
-                </div>
-            </div>
-            <div class="windDetails">
-                <p class="dataShown">Wind Direction: {{weatherData.current.wind_dir}}</p>
-                <p class="dataShown">Wind Speed: {{weatherData.current.wind_kph}}km/hr</p>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<!-- <nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid" *ngIf="weatherData">
-        <p class="navbar-brand">{{weatherData.location.name}}</p>
-        <p>{{weatherData.location.region}},{{weatherData.location.country}}</p>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row justify-content-end w-100">
-            <li class="nav-item">
+        <ul class="navbar-nav me-auto d-flex flex-row justify-content-between align-items-center w-100">
+            <li class="nav-item w-30">
+                <div class="nav-link me-2">
+                    <p class="navbar-brand">{{weatherData.location.name}}</p>
+                    <p class="locationarea">{{weatherData.location.region}},{{weatherData.location.country}}</p>
+                </div>
+            </li>
+            <li class="nav-item w-auto">
                 <p class="nav-link me-2">Humidity: {{weatherData.current.humidity}}%</p>
             </li>
-            <li class="nav-item">
+            <li class="nav-item w-auto">
                 <p class="nav-link me-2">Visiblity: {{weatherData.current.vis_km}}km</p>
             </li>
-            <li class="nav-item">
+            <li class="nav-item w-auto">
                 <p class="nav-link me-2">Wind Direction: {{weatherData.current.wind_dir}}</p>
             </li>
-            <li class="nav-item">
+            <li class="nav-item w-auto">
                 <p class="nav-link me-2">Wind Speed: {{weatherData.current.wind_kph}}km/hr</p>
             </li>
-            <li class="nav-item">
-                <p class="nav-link me-2">{{weatherData.current.temp_c}}°C <img src={{weatherData.current.condition.icon}}></p>
+            <li class="nav-item w-auto">
+                <p class="nav-link me-2">{{weatherData.current.temp_c}}°C <img
+                        src={{weatherData.current.condition.icon}}></p>
             </li>
         </ul>
     </div>
-</nav> -->
+</nav>
 
+<section class="container">
 <router-outlet></router-outlet>
-<app-footer></app-footer>
+</section>
+
+<app-footer class="mt-auto"></app-footer>
