@@ -1,36 +1,40 @@
-<app-navbar></app-navbar>
+<div class="d-flex flex-column h-100 w-100">
 
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid" *ngIf="weatherData">
-        <ul class="navbar-nav me-auto d-flex flex-row justify-content-between align-items-center w-100">
-            <li class="nav-item w-30">
-                <div class="nav-link me-2">
-                    <p class="navbar-brand">{{weatherData.location.name}}</p>
-                    <p class="locationarea">{{weatherData.location.region}},{{weatherData.location.country}}</p>
-                </div>
-            </li>
-            <li class="nav-item w-auto">
-                <p class="nav-link me-2">Humidity: {{weatherData.current.humidity}}%</p>
-            </li>
-            <li class="nav-item w-auto">
-                <p class="nav-link me-2">Visiblity: {{weatherData.current.vis_km}}km</p>
-            </li>
-            <li class="nav-item w-auto">
-                <p class="nav-link me-2">Wind Direction: {{weatherData.current.wind_dir}}</p>
-            </li>
-            <li class="nav-item w-auto">
-                <p class="nav-link me-2">Wind Speed: {{weatherData.current.wind_kph}}km/hr</p>
-            </li>
-            <li class="nav-item w-auto">
-                <p class="nav-link me-2">{{weatherData.current.temp_c}}°C <img
-                        src={{weatherData.current.condition.icon}}></p>
-            </li>
-        </ul>
-    </div>
-</nav>
+    <app-navbar class="order-1"></app-navbar>
 
-<section class="container">
-<router-outlet></router-outlet>
-</section>
+    <nav class="order-2 navbar navbar-expand-lg bg-light">
+        <div class="container-fluid" *ngIf="weatherData">
+            <ul class="navbar-nav me-auto d-flex flex-row justify-content-evenly align-items-center">
+                <li class="nav-item w-30">
+                    <div class="nav-link me-2">
+                        <p class="navbar-brand">{{weatherData.location.name}}</p>
+                        <p class="locationarea">{{weatherData.location.region}},{{weatherData.location.country}}</p>
+                    </div>
+                </li>
+                <li class="nav-item w-auto">
+                    <p class="nav-link me-2">Humidity: {{weatherData.current.humidity}}%</p>
+                </li>
+                <li class="nav-item w-auto">
+                    <p class="nav-link me-2">Visiblity: {{weatherData.current.vis_km}}km</p>
+                </li>
+                <li class="nav-item w-auto">
+                    <p class="nav-link me-2">Wind Direction: {{weatherData.current.wind_dir}}</p>
+                </li>
+                <li class="nav-item w-auto">
+                    <p class="nav-link me-2">Wind Speed: {{weatherData.current.wind_kph}}km/hr</p>
+                </li>
+                <li class="nav-item w-auto">
+                    <p class="nav-link me-2 inline">{{weatherData.current.temp_c}}°C <img class="inline"
+                            src={{weatherData.current.condition.icon}}></p>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-<app-footer class="mt-auto"></app-footer>
+    <section class="order-3 container mb-auto">
+        <router-outlet></router-outlet>
+    </section>
+
+    <!-- <app-footer class="order-4 mt-auto"></app-footer> -->
+
+</div>
