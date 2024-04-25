@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './homepage.component.css'
 })
 export class HomepageComponent implements OnInit{
-  locationsecondMethod: any
-  locationlatitude: any
-  locationlongitude: any
-  weatherData: any;
-  coords: any[] = [];
+  public locationsecondMethod: any
+  public locationlatitude: any
+  public locationlongitude: any
+  public weatherData: any;
+  public coords: any[] = [];
   constructor(private http: HttpClient) {}
   ngOnInit(): void {
     navigator.geolocation.getCurrentPosition((position) => {
